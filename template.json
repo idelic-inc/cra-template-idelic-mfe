@@ -1,0 +1,80 @@
+{
+  "package": {
+    "scripts": {
+      "buildConfig": "tsc --skipLibCheck ./craco.config.ts",
+      "start": "yarn buildConfig && craco start",
+      "build": "yarn buildConfig && craco build",
+      "test": "yarn buildConfig && craco test --env=jest-environment-jsdom-sixteen",
+      "eject": "yarn buildConfig && craco eject",
+      "format": "prettier --write \"src/**/*.ts\" \"src/**/*.tsx\"",
+      "lint": "eslint --fix \"src/**/*.ts\" \"src/**/*.tsx\""
+    },
+    "dependencies": {
+      "@craco/craco": "^5.7.0",
+      "@emotion/core": "^10.0.28",
+      "@emotion/styled": "^10.0.27",
+      "@fluentui/react": "^8.1.8",
+      "@idelic/safety-net": "^2.0.0",
+      "@idelic/safety-suite-api": "^19.0.0",
+      "@testing-library/jest-dom": "^5.11.4",
+      "@testing-library/react-hooks": "^3.4.2",
+      "@testing-library/react": "^11.1.0",
+      "@testing-library/user-event": "^12.1.10",
+      "@types/jest": "^26.0.15",
+      "@types/node": "^12.0.0",
+      "@types/react-dom": "^17.0.0",
+      "@types/react-router-dom": "^5.1.5",
+      "@types/react-router": "^5.1.8",
+      "@types/react": "^17.0.0",
+      "@types/testing-library__jest-dom": "^5.9.5",
+      "@typescript-eslint/eslint-plugin": "^4.5.0",
+      "@typescript-eslint/parser": "^4.5.0",
+      "eslint-config-airbnb-typescript": "^12.3.1",
+      "eslint-config-prettier": "^8.1.0",
+      "eslint-plugin-prettier": "^3.3.1",
+      "eslint-plugin-simple-import-sort": "^7.0.0",
+      "eslint": "^7.11.0",
+      "history": "^4.10.1",
+      "immutable": "^4.0.0-rc.12",
+      "jest-emotion": "^11.0.0",
+      "jest-environment-jsdom-sixteen": "^1.0.3",
+      "jest": "26.6.0",
+      "prettier": "^2.2.1",
+      "react-router-dom": "^5.2.0",
+      "react-router": "^5.2.0",
+      "ts-jest": "^26.5.3",
+      "typescript": "4.1.2",
+      "web-vitals": "^1.0.1"
+    },
+    "eslintConfig": {
+      "extends": ["react-app", "react-app/jest"]
+    },
+    "browserslist": {
+      "production": [">0.2%", "not dead", "not op_mini all"],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "lint-staged"
+      }
+    },
+    "lint-staged": {
+      "*.{ts,tsx}": ["eslint --fix", "prettier --write", "git add"]
+    },
+    "jest": {
+      "transform": {
+        "^.+\\.tsx?$": "ts-jest"
+      },
+      "transformIgnorePatterns": ["node_modules/(?!office-ui-fabric-react)"],
+      "moduleNameMapper": {
+        "^src/(.*)$": "<rootDir>/src/$1",
+        "@fluentui/(.*)/lib/(.*)$": "@fluentui/$1/lib-commonjs/$2",
+        "@uifabric/(.*)/lib/(.*)$": "@uifabric/$1/lib-commonjs/$2"
+      }
+    }
+  }
+}

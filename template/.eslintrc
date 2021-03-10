@@ -1,0 +1,70 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"]
+      }
+    }
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["@typescript-eslint", "prettier", "simple-import-sort"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "airbnb-typescript",
+    "prettier"
+  ],
+  "ignorePatterns": "craco.*",
+  "rules": {
+    "@typescript-eslint/explicit-member-accessibility": 0,
+    "@typescript-eslint/explicit-function-return-type": [
+      2,
+      {
+        "allowExpressions": true,
+        "allowHigherOrderFunctions": true
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-use-before-define": ["error", "nofunc"],
+    "@typescript-eslint/prefer-interface": "off",
+    "func-names": "off",
+    "import/first": "error",
+    "import/no-duplicates": "error",
+    "react/react-in-jsx-scope": "off",
+    "import/no-cycle": "off",
+    "import/prefer-default-export": "off",
+    "no-console": ["warn", {"allow": ["warn", "error"]}],
+    "no-debugger": "warn",
+    "no-underscore-dangle": "off",
+    "prettier/prettier": "warn",
+    "react/jsx-props-no-spreading": "off",
+    "react/prop-types": "off",
+    "simple-import-sort/imports": "error",
+    "sort-imports": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.test.*", "setupTests.ts"],
+      "env": {
+        "browser": false,
+        "jest": true
+      },
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
+    }
+  ],
+  "globals": {
+    "window": true
+  }
+}
