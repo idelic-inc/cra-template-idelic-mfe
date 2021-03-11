@@ -10,7 +10,7 @@
       "lint": "eslint --fix \"src/**/*.ts\" \"src/**/*.tsx\""
     },
     "dependencies": {
-      "@craco/craco": "^5.7.0",
+      "@craco/craco": "^6.1.1",
       "@emotion/core": "^10.0.28",
       "@emotion/styled": "^10.0.27",
       "@fluentui/react": "^8.1.8",
