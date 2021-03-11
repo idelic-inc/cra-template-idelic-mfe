@@ -1,24 +1,26 @@
 {
-  "name": "cra-template-typescript",
-  "version": "1.1.2",
+  "name": "cra-template-idelic-mfe",
+  "version": "1.0.0",
   "keywords": [
+    "cra-template-idelic",
+    "cra-template-idelic-mfe",
     "react",
     "create-react-app",
     "template",
     "typescript"
   ],
-  "description": "The base TypeScript template for Create React App.",
+  "description": "The Idelic microfrontend template for Create React App.",
+  "main": "template.json",
   "repository": {
     "type": "git",
-    "url": "https://github.com/facebook/create-react-app.git",
-    "directory": "packages/cra-template-typescript"
+    "url": "https://github.com/idelic-inc/cra-template-idelic-mfe.git"
   },
   "license": "MIT",
   "engines": {
     "node": ">=10"
   },
   "bugs": {
-    "url": "https://github.com/facebook/create-react-app/issues"
+    "url": "https://github.com/idelic-inc/cra-template-idelic-mfe/issues"
   },
   "files": [
     "template",

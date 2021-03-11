@@ -6,6 +6,8 @@ Start off by globally replacing `mfe_name` with the name of this microfrontend.
 
 Next, make sure to update the `PORT` environment variable to be unique. Make sure to check the [Local Development Ports](https://www.notion.so/idelic/Local-Development-Ports-707ec755636d496ab36909e10be9d9a1) page on Notion first.
 
+A full guide is available in this Notion page: [Setting Up a New Microfrontend](https://www.notion.so/idelic/Setting-Up-a-New-Microfrontend-5231c73dfa6248e2a339923fa2407e39)
+
 ## Available Scripts
 
 In the project directory, you can run:
