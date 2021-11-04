@@ -1,8 +1,7 @@
 import styled from '@emotion/styled';
-import {Text, ThemeProvider} from '@fluentui/react';
-import {FunctionComponent} from 'react';
-
-import {safetySuiteTheme} from './theme';
+import {Text} from '@fluentui/react';
+import {ThemeProvider} from '@idelic/safety-suite-ui';
+import React, {FunctionComponent} from 'react';
 
 const Root = styled(ThemeProvider)({
   height: '100%'
@@ -20,7 +19,7 @@ const Code = styled.code({
 });
 
 export const App: FunctionComponent = () => (
-  <Root theme={safetySuiteTheme}>
+  <Root>
     <Container>
       <img
         alt='Idelic Shield Logo'
