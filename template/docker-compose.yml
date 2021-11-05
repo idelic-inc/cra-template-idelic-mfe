@@ -3,4 +3,8 @@ version: '3.4'
 services:
   mfe_name:
     image: '465133313964.dkr.ecr.us-east-1.amazonaws.com/safety-suite-frontend/mfe_name'
-    build: .
+    build:
+      context: .
+      args:
+        GENERATE_SOURCEMAP: 'false'
+        NPM_TOKEN:

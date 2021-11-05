@@ -2,6 +2,9 @@ version: '3.4'
 
 services:
   mfe_name:
+    build:
+      args:
+        GENERATE_SOURCEMAP: 'true'
     container_name: mfe_name
     image: '465133313964.dkr.ecr.us-east-1.amazonaws.com/safety-suite-frontend/mfe_name:master'
     ports:
